@@ -77,7 +77,7 @@ public class HearthStoneSpmfCodeAndDecode {
      * @param fileReader
      * @throws IOException
      */
-    static void conversion (FileReader fileReader) throws IOException {
+    static void conversionSpmf (FileReader fileReader) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String contenuLigne ;
         partie partieCourante = new partie();
@@ -119,7 +119,7 @@ public class HearthStoneSpmfCodeAndDecode {
      * ecrire dans un fichier de sortie
      * @param nomFile
      */
-    static void ecrireDansFichier(String nomFile) throws FileNotFoundException {
+    static void ecrireDansFichierSpmf(String nomFile) throws FileNotFoundException {
         String path = "sortie/"+nomFile ;
         PrintWriter writer = new PrintWriter(path);
         //entête
@@ -137,19 +137,24 @@ public class HearthStoneSpmfCodeAndDecode {
     }
 
 
-
-
     public static void main(String[] args) throws IOException {
 
         Scanner sc = new Scanner(System.in) ;
 
+        System.out.print("Entrez le format souhaité (SPMF; .. ;..) :  ");
+        String format = sc.nextLine();
         System.out.print("Entrez le fichier de données :  ");
         String entree = sc.nextLine();
         System.out.print("Entrez le fichier de destination:  ");
         String sortie = sc.nextLine();
         FileReader fichier = lireFichier(entree);
-        conversion(fichier);
-        ecrireDansFichier(sortie);
+        switch (format.toLowerCase()) {
+            case "spmf":
+            conversionSpmf(fichier);
+            ecrireDansFichierSpmf(sortie);
+            default:
+                System.out.println("Le format choisi est incorrecte");
+        }
 
     }
 
