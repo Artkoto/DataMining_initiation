@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class HearthStoneSpmfCodeAndDecode {
@@ -75,23 +72,28 @@ public class HearthStoneSpmfCodeAndDecode {
         return result;
     }
 
+    /**
+     * convertir les donnés au format spmf
+     * @param fileReader
+     * @throws IOException
+     */
     static void conversion (FileReader fileReader) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String contenuLigne ;
-        boolean partieDebute = false ;
         partie partieCourante = new partie();
         while ((contenuLigne = bufferedReader.readLine()) != null){
-           // System.out.println(contenuLigne);
             String action = mot(2, contenuLigne);
             //debut d'une partie
-            if (action.contains("Begin") && partieDebute){
+            if (action.contains("Begin")){
+                if (!partieCourante.cartesJoueur1.isEmpty())
                 dataSpmf.add(partieCourante.getCarteJoueur1());
+                if (!partieCourante.cartesJoueur2.isEmpty())
                 dataSpmf.add(partieCourante.getCarteJoueur2());
                 partieCourante.reset();
 
             }
             //verifier si le caracter est différent de theCoin
-            else if (!action.contains("TheCoin") && !action.contains("Begin")){
+            else if (!action.contains("TheCoin")){
                 //verifier si c'est le joueur 1 ou 2
                 Integer carteValNum ;
                 String cateName = action.substring(1);
@@ -106,7 +108,6 @@ public class HearthStoneSpmfCodeAndDecode {
                 else if (action.charAt(0)=='O'){
                         partieCourante.addCarteJ2(carteValNum);
                 }
-                partieDebute=true;
             }
         }
         dataSpmf.add(partieCourante.getCarteJoueur1());
@@ -114,30 +115,41 @@ public class HearthStoneSpmfCodeAndDecode {
 
     }
 
+    /**
+     * ecrire dans un fichier de sortie
+     * @param nomFile
+     */
+    static void ecrireDansFichier(String nomFile) throws FileNotFoundException {
+        String path = "sortie/"+nomFile ;
+        PrintWriter writer = new PrintWriter(path);
+        //entête
+        writer.println("@CONVERTED_FROM_TEXT");
+        for ( Map.Entry<String, Integer> m : dataCartes.entrySet()) {
+            writer.println("@ITEM=" + m.getValue() + "=" + m.getKey());
+        }
+        for (List<Integer> m : dataSpmf){
+            Collections.sort(m);
+            String ligne = m.toString().substring(1,m.toString().length()-1);
+            writer.println(ligne.replaceAll(",", ""));
+        }
+        System.out.println("\nConversion terminée.");
+        writer.close();
+    }
+
+
+
 
     public static void main(String[] args) throws IOException {
 
         Scanner sc = new Scanner(System.in) ;
 
+        System.out.print("Entrez le fichier de données :  ");
         String entree = sc.nextLine();
-       // System.out.println(mot(2,entree));
+        System.out.print("Entrez le fichier de destination:  ");
+        String sortie = sc.nextLine();
         FileReader fichier = lireFichier(entree);
         conversion(fichier);
-       // System.out.println(dataCartes.size());
-       /* for ( Map.Entry<String, Integer> m : dataCartes.entrySet()){
-            System.out.println(m.getValue() + "\t"+ m.getKey());
-        }*/
-        System.out.println("@CONVERTED_FROM_TEXT");
-         for ( Map.Entry<String, Integer> m : dataCartes.entrySet()) {
-             System.out.println("@ITEM=" + m.getValue() + "=" + m.getKey());
-         }
-        for (List<Integer> m : dataSpmf){
-            for (Integer i : m) {
-                System.out.print(i + "\t");
-            }
-            System.out.println("\n#####################################################");
-        }
-        System.out.println(dataSpmf.get(0).get(0));
+        ecrireDansFichier(sortie);
 
     }
 
