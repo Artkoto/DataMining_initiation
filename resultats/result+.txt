@@ -1,0 +1,17 @@
+LesserHeal #SUP: 56
+AzureDrake #SUP: 79
+HauntedCreeper #SUP: 81
+MadScientist #SUP: 65
+IronbeakOwl #SUP: 53
+Loatheb #SUP: 67
+SteadyShot #SUP: 49
+KnifeJuggler #SUP: 55
+Shapeshift #SUP: 46
+Dr.Boom #SUP: 88
+PilotedShredder #SUP: 130
+Reinforce #SUP: 43
+Fireblast #SUP: 68
+Fireblast Frostbolt #SUP: 51
+SludgeBelcher #SUP: 74
+Frostbolt #SUP: 53
+EmperorThaurissan #SUP: 42
