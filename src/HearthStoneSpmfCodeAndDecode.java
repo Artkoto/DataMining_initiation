@@ -41,7 +41,7 @@ public class HearthStoneSpmfCodeAndDecode {
     }
 
     static FileReader lireFichier (String nom) throws FileNotFoundException {
-        String path = "data/"+nom ;
+        String path = "datas/"+nom ;
         FileReader file = new FileReader(path);
         return file;
     }
@@ -120,7 +120,7 @@ public class HearthStoneSpmfCodeAndDecode {
      * @param nomFile
      */
     static void ecrireDansFichierSpmf(String nomFile) throws FileNotFoundException {
-        String path = "sortie/"+nomFile ;
+        String path = "convertis/"+nomFile ;
         PrintWriter writer = new PrintWriter(path);
         //entête
         writer.println("@CONVERTED_FROM_TEXT");
@@ -139,19 +139,18 @@ public class HearthStoneSpmfCodeAndDecode {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in) ;
+        //Scanner sc = new Scanner(System.in) ;
 
-        System.out.print("Entrez le format souhaité (SPMF; .. ;..) :  ");
-        String format = sc.nextLine();
-        System.out.print("Entrez le fichier de données :  ");
-        String entree = sc.nextLine();
-        System.out.print("Entrez le fichier de destination:  ");
-        String sortie = sc.nextLine();
+        String format = args[0];
+        System.out.println("Format souhaité  : "+format);
+        String entree = args[1];
+        System.out.print("Fichier de données :  "+entree);
+
         FileReader fichier = lireFichier(entree);
         switch (format.toLowerCase()) {
             case "spmf":
             conversionSpmf(fichier);
-            ecrireDansFichierSpmf(sortie);
+            ecrireDansFichierSpmf("format_SPMF_"+entree);
             default:
                 System.out.println("Le format choisi est incorrecte");
         }
