@@ -1,6 +1,13 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * Convertiseur de fichier
+ * @author Yao Arnaud Akoto
+ * @author kassim kaba
+ *
+ */
+
 public class HearthStoneSpmfCodeAndDecode {
 
     static Map<String , Integer> dataCartes = new HashMap<>();
