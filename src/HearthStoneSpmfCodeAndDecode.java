@@ -151,13 +151,14 @@ public class HearthStoneSpmfCodeAndDecode {
         String format = args[0];
         System.out.println("Format souhaité  : "+format);
         String entree = args[1];
-        System.out.print("Fichier de données :  "+entree);
+        System.out.print("Fichier de données : "+entree);
 
         FileReader fichier = lireFichier(entree);
         switch (format.toLowerCase()) {
             case "spmf":
             conversionSpmf(fichier);
             ecrireDansFichierSpmf("format_SPMF_"+entree);
+            break;
             default:
                 System.out.println("Le format choisi est incorrecte");
         }
