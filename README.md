@@ -1,6 +1,6 @@
 # tp_DataMining
 
-##Consigne d'utilisation
+## Consigne d'utilisation
 Ce programme fonction sous le système linux.
 Avant tout exécution, assurez-vous d'activer l'autorisation aux fichiers start.sh et compile.sh à s'exécuter comme programmes
 
@@ -30,13 +30,11 @@ Exemple
 ```
 Dans le cas de l'option 2, le fichier de sortie est sous la forme nomAlgorithme_fichierDeDonnes
 
-##Où trouver les fichiers ?
+## Où trouver les fichiers ?
 
 ```mermaid
 graph TD;
    Jeux de données-->datas;
-   Fichier au format spmf-->convertis;
-   Résultats du programme Spmf-->resultats;
-  Analyse des resultats-->analyse;
+ 
 ```
 
