@@ -28,13 +28,14 @@ Exemple
 ```bash
 ./start.sh LCM all_absolute+.txt 3
 ```
-Dans le cas de l'option 2, le fichier de sortie est sous la forme nomAlgorithme_fichierDeDonnes
+Dans le cas de l'option 2, le fichier de sortie est sous la forme "nomAlgorithme_fichierDeDonnes"
 
 ## Où trouver les fichiers ?
 
-```mermaid
-graph TD;
-   Jeux de données-->datas;
- 
+```
+   Jeux de données --> datas
+   Fichier au format spmf --> convertis
+   Résultats du programme Spmf --> resultats
+  Analyse des resultats --> analyse
 ```
 
