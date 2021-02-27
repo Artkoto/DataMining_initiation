@@ -196,7 +196,7 @@ public class AnalyseResultats {
                     nbDruid =support;
                     nbTotal+=support;
                     break;
-                case "Steadyshot":
+                case "steadyshot":
                     nbHunter=support;
                     nbTotal+=support;
                     break;
@@ -329,7 +329,7 @@ public class AnalyseResultats {
             for (String s : itemSetDPlus){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetD5.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -337,7 +337,7 @@ public class AnalyseResultats {
             for (String s : itemSetD5){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetD4.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -345,7 +345,7 @@ public class AnalyseResultats {
             for (String s : itemSetD4){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetD3.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -353,7 +353,7 @@ public class AnalyseResultats {
             for (String s : itemSetD3){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetD2.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -361,7 +361,7 @@ public class AnalyseResultats {
             for (String s : itemSetD2){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
 
 
@@ -373,7 +373,7 @@ public class AnalyseResultats {
             for (String s : itemSetWarrio){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetRogue.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -381,15 +381,15 @@ public class AnalyseResultats {
             for (String s : itemSetRogue){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetMage.isEmpty()){
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
             writer.println("####################### ITEMSET MAGES ########################");
             for (String s : itemSetMage){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetPriest.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -397,7 +397,7 @@ public class AnalyseResultats {
             for (String s : itemSetPriest){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetWarlock.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -405,7 +405,7 @@ public class AnalyseResultats {
             for (String s : itemSetWarlock){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetPaladin.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -413,7 +413,7 @@ public class AnalyseResultats {
             for (String s : itemSetPaladin){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetDruid.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -421,7 +421,7 @@ public class AnalyseResultats {
             for (String s : itemSetDruid){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetHunter.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -429,7 +429,7 @@ public class AnalyseResultats {
             for (String s : itemSetHunter){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!itemSetShaman.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -437,7 +437,7 @@ public class AnalyseResultats {
             for (String s : itemSetShaman){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
 
         writer.println("\n\n***************************************************************************\n\n");
@@ -448,7 +448,7 @@ public class AnalyseResultats {
             for (String s : specificCartesWarrio){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!specificCartesRogue.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -456,7 +456,7 @@ public class AnalyseResultats {
             for (String s : specificCartesRogue){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!specificCartesMage.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -464,7 +464,7 @@ public class AnalyseResultats {
             for (String s : specificCartesMage){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!specificCartesPriest.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -472,7 +472,7 @@ public class AnalyseResultats {
             for (String s : specificCartesPriest){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!specificCartesWarlock.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -480,7 +480,7 @@ public class AnalyseResultats {
             for (String s : specificCartesWarlock){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!specificCartesPaladin.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -488,7 +488,7 @@ public class AnalyseResultats {
             for (String s : specificCartesPaladin){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!specificCartesDruid.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -496,7 +496,7 @@ public class AnalyseResultats {
             for (String s : specificCartesDruid){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!specificCartesHunter.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -504,7 +504,7 @@ public class AnalyseResultats {
             for (String s : specificCartesHunter){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!specificCartesShaman.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -512,7 +512,7 @@ public class AnalyseResultats {
             for (String s : specificCartesShaman){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
         if (!cartesCommunes.isEmpty()){
             writer.println("_____________________________________________________________________");
@@ -520,7 +520,7 @@ public class AnalyseResultats {
             for (String s : cartesCommunes){
                 writer.println(s);
             }
-            writer.println("_____________________________________________________________________");
+            writer.println("_____________________________________________________________________\n\n");
         }
 
 
@@ -539,10 +539,17 @@ public class AnalyseResultats {
         writer.close();
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
+        try {
+            String entre = args[0];
+            String sortie = args[1];
+            decoup(entre);
+            ecrireAnalyse(sortie);
+            System.out.println("Analyse ok");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-        decoup("result1");
-        ecrireAnalyse("analyse1");
 
 
     }
