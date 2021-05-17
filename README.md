@@ -1,7 +1,7 @@
 # tp_DataMining
 
 ## Consigne d'utilisation
-Ce programme fonction sous le système linux.
+Ce programme fonction sous le système linux Et uniquement avec les données des parties du jeux de carte `Hearthstone`. 
 Avant tout exécution, assurez-vous d'activer l'autorisation aux fichiers start.sh et compile.sh à s'exécuter comme programmes
 
 pour installer le programme lancer la commande :
